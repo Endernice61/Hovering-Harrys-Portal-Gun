@@ -1,0 +1,8 @@
+"Properties" {
+	"Authors" "Hovering Harry"
+	"Description" "Certain items place portals with linkage id that is not default. This item corrects the linkage id. Use Start Reversed to change the portal being corrected to orange. This item outputs when it corrects a portal. "
+	"Icon"
+	{
+		"0" "hovering_harry/portal_corrector.png"
+	}
+}

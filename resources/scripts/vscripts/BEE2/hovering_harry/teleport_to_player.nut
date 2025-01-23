@@ -1,0 +1,1 @@
+self.SetOrigin(player.GetCenter());

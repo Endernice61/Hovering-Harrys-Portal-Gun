@@ -1,0 +1,8 @@
+"Properties" {
+	"Authors" "Hovering Harry"
+	"Description" "This item uses inputs from the input A/B item: A causes the player to drop the portal gun and B removes dropped portal guns and returns the dual portal gun to the player. This item also outputs to the output handler (provided by this ucp) or a similar item: 3 seconds for dropping the blue portal gun, 4 for orange, 5 for picking up the dropped blue portal gun and 6 for orange. "
+	"Icon"
+	{
+		"0" "hovering_harry/drop_gun.png"
+	}
+}

@@ -1,0 +1,8 @@
+"Properties" {
+	"Authors" "Hovering Harry"
+	"Description" "Invisible version of a portal detector from some ucp, should be used for minor invisible corrections"
+	"Icon"
+	{
+		"0" "hovering_harry/portal_detector.png"
+	}
+}

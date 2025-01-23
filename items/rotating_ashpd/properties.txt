@@ -1,0 +1,12 @@
+"Properties" {
+	"Authors" "Hovering Harry"
+	"Description" {
+		"" "This item has 4 outputs which needs an output handler (provided by my other ucp) or a similar item: 3 seconds for placing the blue portal gun, 4 for orange, 5 for picking up the blue portal gun and 6 for picking up the orange portal gun. "
+		"" "This item takes inputs from the Inputs A/B item: input A rotates the pedestal and input B fires the portal gun. Start Enabled to have the pedestal start empty and Start Reversed to make it an orange portal gun"
+		"" "Do not place on walls or ceilings, there are mysterious bugs I need to fix"
+		}
+	"Icon"
+	{
+		"0" "clean/portalgun.png"
+	}
+}

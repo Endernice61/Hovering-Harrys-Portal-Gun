@@ -1,0 +1,134 @@
+"ID" "HOVERING_HARRYS_PORTAL_GUN"
+"Name" "Hovering Harry's portal guns"
+"Desc" "Thank you evely_one for helping with the portal gun drop logic and thank you TeamSpen210 for helping me figure ucps out"
+"Item"
+{
+	"ID"  "PORTAL_GUN_GIVER"
+	"Version"
+	{
+		"Styles"
+		{
+			"ANY_STYLE" "portal_gun_giver"
+		}
+	}
+}
+"Item"
+{
+	"ID"  "DROP_GUN"
+	"Version"
+	{
+		"Styles"
+		{
+			"ANY_STYLE" "drop_gun"
+		}
+	}
+}
+"Item"
+{
+	"ID"  "ROTATING_ASHPD"
+	"Version"
+	{
+		"Styles"
+		{
+			"ANY_STYLE" "rotating_ashpd"
+		}
+	}
+}
+"Item"
+{
+	"ID"  "PORTAL_CORRECTOR"
+	//"all_conf"	"portal_corrector"
+	"Version"
+	{
+		"Styles"
+		{
+			"ANY_STYLE" 
+				{
+				"Folder" "portal_corrector"
+				"Instances"
+					{
+					"bee2_necessary_blue"    "instances/BEE2/hovering_harry/portal_corrector/portal_corrector_necessary_blue.vmf"
+					"bee2_necessary_red" "instances/BEE2/hovering_harry/portal_corrector/portal_corrector_necessary_red.vmf"
+					"bee2_blue"    "instances/BEE2/hovering_harry/portal_corrector/portal_corrector_blue.vmf"
+					"bee2_red" "instances/BEE2/hovering_harry/portal_corrector/portal_corrector_red.vmf"
+					}
+				}
+		}
+	}
+}
+"Item"
+{
+	"ID"  "PORTAL_DETECTOR"
+	"Version"
+	{
+		"Styles"
+		{
+			"ANY_STYLE" "portal_detector"
+		}
+	}
+}
+"Signage"
+{
+    "ID" "SIGN_WEAPONSTRIP"
+    "Name" "Portal gun removal signage"
+    "Styles"
+    {
+        "BEE2_CLEAN"
+        {
+            "overlay" "BEE2/signage/hovering_harry/signage_weaponstrip"//Material location
+            "icon" "items/clean/signage/hovering_harry/signage_weaponstrip.png"
+        }
+    }
+}
+"Signage"
+{
+    "ID" "SIGN_GIVEGUN"
+    "Name" "Portal gun give signage"
+    "Styles"
+    {
+        "BEE2_CLEAN"
+        {
+            "overlay" "BEE2/signage/hovering_harry/signage_give_gun"//Material location
+            "icon" "items/clean/signage/hovering_harry/signage_give_gun.png"
+        }
+    }
+}
+"Signage"
+{
+    "ID" "SIGN_DROPGUN"
+    "Name" "Portal gun drop signage"
+    "Styles"
+    {
+        "BEE2_CLEAN"
+        {
+            "overlay" "BEE2/signage/hovering_harry/signage_drop_gun"//Material location
+            "icon" "items/clean/signage/hovering_harry/signage_drop_gun.png"
+        }
+    }
+}
+"Signage"
+{
+    "ID" "SIGN_ORANGEGUN"
+    "Name" "Portal orange gun signage"
+    "Styles"
+    {
+        "BEE2_CLEAN"
+        {
+            "overlay" "BEE2/signage/hovering_harry/signage_orange_gun"//Material location
+            "icon" "items/clean/signage/hovering_harry/signage_orange_gun.png"
+        }
+    }
+}
+"Signage"
+{
+    "ID" "SIGN_BLUEGUN"
+    "Name" "Portal blue gun signage"
+    "Styles"
+    {
+        "BEE2_CLEAN"
+        {
+            "overlay" "BEE2/signage/hovering_harry/signage_blue_gun"//Material location
+            "icon" "items/clean/signage/hovering_harry/signage_blue_gun.png"
+        }
+    }
+}
