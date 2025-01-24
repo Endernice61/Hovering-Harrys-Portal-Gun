@@ -1,8 +1,0 @@
-"Properties" {
-	"Authors" "Hovering Harry"
-	"Description" "Item to give and take away the portal gun. **Start Enabled** for blue, **Start Reversed** for orange, and having them both unchecked will remove the portal gun. "
-	"Icon"
-	{
-		"0" "hovering_harry/portal_gun_giver.png"
-	}
-}
