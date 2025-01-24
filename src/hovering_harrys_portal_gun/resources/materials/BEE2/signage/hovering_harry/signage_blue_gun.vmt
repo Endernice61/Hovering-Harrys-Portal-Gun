@@ -1,0 +1,9 @@
+LightmappedGeneric
+	{
+	$basetexture "BEE2/signage/hovering_harry/signage_blue_gun"
+	$surfaceprop glass
+	$selfillum 1
+	%noportal 1
+	%nopaint 1
+	$nodecal 1
+	}
