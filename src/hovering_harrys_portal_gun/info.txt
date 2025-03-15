@@ -36,28 +36,6 @@
 }
 "Item"
 {
-	"ID"  "PORTAL_CORRECTOR"
-	//"all_conf"	"portal_corrector"
-	"Version"
-	{
-		"Styles"
-		{
-			"ANY_STYLE" 
-				{
-				"Folder" "portal_corrector"
-				"Instances"
-					{
-					"bee2_necessary_blue"    "instances/BEE2/hovering_harry/portal_corrector/portal_corrector_necessary_blue.vmf"
-					"bee2_necessary_red" "instances/BEE2/hovering_harry/portal_corrector/portal_corrector_necessary_red.vmf"
-					"bee2_blue"    "instances/BEE2/hovering_harry/portal_corrector/portal_corrector_blue.vmf"
-					"bee2_red" "instances/BEE2/hovering_harry/portal_corrector/portal_corrector_red.vmf"
-					}
-				}
-		}
-	}
-}
-"Item"
-{
 	"ID"  "PORTAL_DETECTOR"
 	"Version"
 	{
