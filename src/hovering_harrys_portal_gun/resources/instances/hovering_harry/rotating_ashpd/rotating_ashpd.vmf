@@ -2,7 +2,7 @@ versioninfo
 {
 	"editorversion" "400"
 	"editorbuild" "8869"
-	"mapversion" "868"
+	"mapversion" "893"
 	"formatversion" "100"
 	"prefab" "0"
 }
@@ -113,7 +113,7 @@ bgimages_plus
 world
 {
 	"id" "1"
-	"mapversion" "868"
+	"mapversion" "893"
 	"classname" "worldspawn"
 	"detailmaterial" "detail/detailsprites"
 	"detailvbsp" "detail.vbsp"
@@ -316,6 +316,10 @@ entity
 	"PostSpawnSpeed" "0"
 	"spawnflags" "0"
 	"targetname" "pedestal_gun_spawner"
+	connections
+	{
+		"OnEntitySpawned" "pedestal_gun_scriptRunScriptCodetrackGun()0-1"
+	}
 	"origin" "12 0 -18"
 	editor
 	{
@@ -467,7 +471,7 @@ entity
 	connections
 	{
 		"OnTrigger" "pedestal_return2Test0-1"
-		"OnTrigger" "pedestal_gunKill0-1"
+		"OnTrigger" "pedestal_gun_scriptRunScriptCodekillGun()0-1"
 		"OnTrigger" "!selfDisable0-1"
 		"OnTrigger" "pedestal_gun_retrieve_spawnerForceSpawn0.01-1"
 		"OnTrigger" "pedestal_fire_playsoundDisable0-1"
@@ -495,6 +499,7 @@ entity
 	"fademindist" "-1"
 	"fadescale" "1"
 	"spawnflags" "0"
+	"StartingTeamNum" "0"
 	"targetname" "pedestal_gun_retrieve"
 	"vscripts" "bee2/hovering_harry/teleport_to_player"
 	"origin" "-56 -8 -8"
@@ -552,7 +557,7 @@ entity
 	"id" "81824"
 	"classname" "logic_relay"
 	"spawnflags" "0"
-	"StartDisabled" "0"
+	"StartDisabled" "1"
 	"targetname" "pedestal_fire_playsound"
 	connections
 	{
@@ -965,6 +970,7 @@ entity
 	"fademindist" "-1"
 	"fadescale" "1"
 	"spawnflags" "3"
+	"StartingTeamNum" "1"
 	"targetname" "pedestal_gun"
 	"origin" "12 0 -2"
 	editor
@@ -972,7 +978,6 @@ entity
 		"color" "0 0 200"
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
-		"comments" "Kills self on pickup because of bug where outputs fire without picking it up. This means that the player does not obtain the portal gun, but they can place it back and pick it up again. "
 		"logicalpos" "[0 12000]"
 	}
 }
@@ -1001,7 +1006,7 @@ entity
 	"targetname" "pedestal_gun_start_enabled"
 	connections
 	{
-		"OnTrigger" "place_gunTrigger0-1"
+		"OnTrigger" "place_gunTrigger0.01-1"
 	}
 	"origin" "-56 56 40"
 	editor
@@ -1021,25 +1026,9 @@ entity
 	"targetname" "pedestal_activate_rotate"
 	connections
 	{
-		"OnTrigger" "pedestal_plateSetParentpedestal_rotate0-1"
-		"OnTrigger" "pedestalSetParentpedestal_rotate0-1"
-		"OnTrigger" "pedestal_rotateOpen0-1"
-		"OnTrigger" "pedestal_rotateClose3.03-1"
 		"OnTrigger" "!selfDisable0-1"
-		"OnTrigger" "!selfEnable3.05-1"
-		"OnTrigger" "pedestalClearParent3-1"
-		"OnTrigger" "pedestal_plateClearParent3-1"
-		"OnTrigger" "pedestal_gun_spawnerSetParentpedestal_rotate0-1"
-		"OnTrigger" "pedestal_gun_spawnerClearParent3-1"
-		"OnTrigger" "pedestal_rotateSetSpeed19803.01-1"
-		"OnTrigger" "pedestal_rotateSetSpeed303.05-1"
-		"OnTrigger" "pedestal_rotate_soundPlaySound0-1"
-		"OnTrigger" "pedestal_placeSetParentpedestal_rotate0-1"
-		"OnTrigger" "pedestal_placeClearParent3-1"
-		"OnTrigger" "pedestal_activate_gunDisable0-1"
-		"OnTrigger" "pedestal_activate_gunEnable3-1"
+		"OnTrigger" "pedestal_gun_scriptRunScriptCoderotate()0.01-1"
 		"OnTrigger" "pedestal_placeLock0-1"
-		"OnTrigger" "pedestal_placeUnlock3.05-1"
 	}
 	"origin" "24 0 -104"
 	editor
@@ -1060,7 +1049,6 @@ entity
 	connections
 	{
 		"OnTrigger" "pedestal_activate_fireTest0-1"
-		"OnTrigger" "pedestal_activate_redTrigger0-1"
 		"OnTrigger" "pedestal_fire_playsoundTrigger0-1"
 	}
 	"origin" "56 56 40"
@@ -1081,8 +1069,8 @@ entity
 	"targetname" "pedestal_activate_fire"
 	connections
 	{
-		"OnFalse" "pedestal_gunFirePortal10-1"
-		"OnTrue" "pedestal_gunFirePortal20-1"
+		"OnFalse" "pedestal_gun_scriptRunScriptCodefirePortal1()0-1"
+		"OnTrue" "pedestal_gun_scriptRunScriptCodefirePortal2()0-1"
 	}
 	"origin" "56 56 56"
 	editor
@@ -1172,6 +1160,7 @@ entity
 	{
 		"OnPressed" "place_gunTrigger0-1"
 		"OnPressed" "pedestal_gun_pickupTrigger0-1"
+		"OnPressed" "pedestal_gun_scriptRunScriptCodesetRotationDelay(66)0-1"
 	}
 	solid
 	{
@@ -1309,7 +1298,7 @@ entity
 	"targetname" "pedestal_gun_kill"
 	connections
 	{
-		"OnTrigger" "pedestal_gunKill0-1"
+		"OnTrigger" "pedestal_gun_scriptRunScriptCodekillGun()0-1"
 		"OnTrigger" "place_gunEnable0-1"
 		"OnTrigger" "pedestal_fire_playsoundDisable0-1"
 		"OnTrigger" "pedestal_gun_pickupDisable0-1"
@@ -1556,7 +1545,6 @@ entity
 		"OnTrigger" "place_gunDisable0-1"
 		"OnTrigger" "pedestal_gun_pickupEnable0.05-1"
 		"OnTrigger" "pedestal_fire_playsoundEnable0-1"
-		"OnTrigger" "pedestal_gunSetParentpedestal0.03-1"
 		"OnTrigger" "pedestal_gun_spawnerForceSpawn0.03-1"
 	}
 	"origin" "24 8 24"
@@ -1586,6 +1574,62 @@ entity
 	{
 		"color" "220 30 220"
 		"visgroupid" "27"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 12000]"
+	}
+}
+entity
+{
+	"id" "82524"
+	"classname" "logic_script"
+	"Group00" "pedestal"
+	"Group01" "pedestal_activate_rotate2"
+	"targetname" "pedestal_gun_script"
+	"vscripts" "bee2/hovering_harry/pedestal_gun.nut"
+	"origin" "0 0 8"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupid" "27"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 12000]"
+	}
+}
+entity
+{
+	"id" "82587"
+	"classname" "logic_relay"
+	"spawnflags" "0"
+	"StartDisabled" "0"
+	"targetname" "pedestal_activate_rotate2"
+	connections
+	{
+		"OnTrigger" "pedestal_plateSetParentpedestal_rotate0-1"
+		"OnTrigger" "pedestalSetParentpedestal_rotate0-1"
+		"OnTrigger" "pedestal_rotateOpen0-1"
+		"OnTrigger" "pedestal_rotateClose3.03-1"
+		"OnTrigger" "pedestalClearParent3-1"
+		"OnTrigger" "pedestal_plateClearParent3-1"
+		"OnTrigger" "pedestal_gun_spawnerSetParentpedestal_rotate0-1"
+		"OnTrigger" "pedestal_gun_spawnerClearParent3-1"
+		"OnTrigger" "pedestal_rotateSetSpeed19803.01-1"
+		"OnTrigger" "pedestal_rotateSetSpeed303.05-1"
+		"OnTrigger" "pedestal_rotate_soundPlaySound0-1"
+		"OnTrigger" "pedestal_placeSetParentpedestal_rotate0-1"
+		"OnTrigger" "pedestal_placeClearParent3-1"
+		"OnTrigger" "pedestal_activate_gunDisable0-1"
+		"OnTrigger" "pedestal_activate_gunEnable3-1"
+		"OnTrigger" "pedestal_placeLock0-1"
+		"OnTrigger" "pedestal_placeUnlock3.05-1"
+		"OnTrigger" "pedestal_activate_rotateEnable3.05-1"
+		"OnTrigger" "pedestal_gun_scriptRunScriptCodereparent()0-1"
+	}
+	"origin" "24 0 -88"
+	editor
+	{
+		"color" "220 30 220"
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[0 12000]"
