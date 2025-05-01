@@ -53,6 +53,11 @@
 			"DefaultValue"  "0"
 			"Index"         "3"
 		}
+		"TimerDelay"
+		{
+			"DefaultValue"  "0"
+			"Index"         "4"
+		}
 		
 	}
 	"Exporting"
@@ -61,13 +66,9 @@
 		{
 			"BEE2"
 			{
-				"Type"	"DUAL"
-				"DefaultDual" "A"
-
-				"Enable_cmd" "pedestal_activate_rotate,Trigger,,0,-1"
+				"Type"	"AND"
+				"Enable_cmd" "input,Trigger,,0,-1"
 				"Disable_cmd" ""
-
-				"Sec_Enable_cmd" "pedestal_activate_gun,Trigger,,0,-1"
 			}
 		}
 		"Outputs"
@@ -87,42 +88,23 @@
 				"BrushCount"	"0" 
 				"BrushSideCount"	"0"
 			}
-			"1"
+			"bee2_inputter"
 			{
-				"Name" "instances/BEE2/hovering_harry/rotating_ashpd/rotating_ashpd.vmf"
-				"EntityCount"	"0"
-				"BrushCount"	"0" 
-				"BrushSideCount"	"0"
-			}
-			"2"
-			{
-				"Name" "instances/BEE2/hovering_harry/rotating_ashpd/rotating_ashpd.vmf"
-				"EntityCount"	"0"
-				"BrushCount"	"0" 
-				"BrushSideCount"	"0"
-			}
-			"3"
-			{
-				"Name" "instances/BEE2/hovering_harry/rotating_ashpd/rotating_ashpd.vmf"
-				"EntityCount"	"0"
-				"BrushCount"	"0" 
-				"BrushSideCount"	"0"
-			}
-			"4"
-			{
-				"Name" "instances/BEE2/hovering_harry/rotating_ashpd/rotating_ashpd.vmf"
-				"EntityCount"	"0"
-				"BrushCount"	"0" 
-				"BrushSideCount"	"0"
-			}
-			"5"
-			{
-				"Name" "instances/BEE2/hovering_harry/rotating_ashpd/rotating_ashpd.vmf"
+				"Name" "instances/BEE2/hovering_harry/rotating_ashpd/inputter.vmf"
 				"EntityCount"	"0"
 				"BrushCount"	"0" 
 				"BrushSideCount"	"0"
 			}
 		}
+		"EmbedFace" 
+			{
+			"Solid"
+				{
+				"Center"        "64 64 128"
+				"Dimensions"    "128 128 4"
+				"Grid"          "Grid_default"
+				}
+			}
 
 		"ConnectionPoints"
 		{
@@ -130,71 +112,71 @@
 			"Point"
 			{
 				"Dir"				"1 0 0"
-				"Pos"				"-1 3 0"
-				"SignageOffset"		"-2 2 0"
+				"Pos"				"2 3 0"
+				"SignageOffset"		"1 2 0"
 				"Priority"  "0"
 			}
 			"Point"
 			{
 				"Dir"				"1 0 0"
-				"Pos"				"-1 4 0"
-				"SignageOffset"		"-2 5 0"
+				"Pos"				"2 4 0"
+				"SignageOffset"		"1 5 0"
 				"Priority"  "0"
 			}
 			// right
 			"Point"
 			{
 				"Dir"				"-1 0 0"
-				"Pos"				"8 3 0"
-				"SignageOffset"		"9 2 0"
+				"Pos"				"5 3 0"
+				"SignageOffset"		"6 2 0"
 				"Priority"  "0"
 			}
 			"Point"
 			{
 				"Dir"				"-1 0 0"
-				"Pos"				"8 4 0"
-				"SignageOffset"		"9 5 0"
+				"Pos"				"5 4 0"
+				"SignageOffset"		"6 5 0"
 				"Priority"  "0"
 			}
 			// up
 			"Point"
 			{
 				"Dir"				"0 1 0"
-				"Pos"				"3 -1 0"
-				"SignageOffset"		"2 -2 0"
+				"Pos"				"3 2 0"
+				"SignageOffset"		"2 1 0"
 				"Priority"  "0"
 			}
 			"Point"
 			{
 				"Dir"				"0 1 0"
-				"Pos"				"4 -1 0"
-				"SignageOffset"		"5 -2 0"
+				"Pos"				"4 2 0"
+				"SignageOffset"		"5 1 0"
 				"Priority"  "0"
 			}
 			// down
 			"Point"
 			{
 				"Dir"				"0 -1 0"
-				"Pos"				"3 8 0"
-				"SignageOffset"		"2 9 0"
+				"Pos"				"3 5 0"
+				"SignageOffset"		"2 6 0"
 				"Priority"  "0"
 			}
 			"Point"
 			{
 				"Dir"				"0 -1 0"
-				"Pos"				"4 8 0"
-				"SignageOffset"		"5 9 0"
+				"Pos"				"4 5 0"
+				"SignageOffset"		"5 6 0"
 				"Priority"  "0"
 			}
 		}
-		"TargetName"	"name"
+		"TargetName"	"rashpd"
 		"Offset"	"64 64 64"
-		"EmbeddedVoxels"
-		{
-			"Voxel"
-			{
-				"Pos"		"0 0 0"
-			}
-		}
+//		"EmbeddedVoxels"
+//		{
+//			"Voxel"
+//			{
+//				"Pos"		"0 0 0"
+//			}
+//		}
 	}
 }

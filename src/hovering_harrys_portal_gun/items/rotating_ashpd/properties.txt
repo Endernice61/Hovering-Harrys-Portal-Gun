@@ -1,9 +1,16 @@
 "Properties" {
 	"Authors" "Hovering Harry"
 	"Description" {
-		"" "This item outputs when there is a portal gun on the pedestal "
-		"" "This item takes inputs from the Inputs A/B item: input A rotates the pedestal and input B fires the portal gun. **Start Enabled** to have the pedestal start empty and **Start Reversed** to make it an orange portal gun"
-		"" "**Blue portal guns shoot the wrong linkage id, currently a portal correcter needs to be used**"
+		"" "This item outputs when there is a portal gun on the pedestal  "
+		"" "This item takes inputs from items of the same type. **Timer Delay** controls which input gets sent, or if no number is set will act as the Rotating ASHPD. If a timer delay is set, inputs from the previous item in the link will get relayed to the next item. "
+		"" "* 0: The Rotating ASHPD"
+		"" "* 3: Fire the pedestal"
+		"" "* 4: Rotate the pedestal  "
+		"" "Connections to this item from other items will cause the portal gun to fire"
+		"" "* **Start Enabled** causes the pedestal to start empty"
+		"" "* **Start Reversed** makes it an orange portal gun  "
+		"" "**Do not have blue portal guns start with the portal gun in the pedestal since they shoot the wrong linkage id for some reason**"
+		"" "**Placing this item on a wall has unpredictable side effects**"
 		}
 	"Icon"
 	{
